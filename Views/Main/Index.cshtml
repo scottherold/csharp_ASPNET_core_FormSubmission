@@ -1,0 +1,60 @@
+<!-- Form with validators from the User model. Spanned validation messages given red text color -->
+
+@model User
+<div class="row justify-content-center">
+    <h2 class="m-4 ">Please Enter Your Information Below:</h2>
+    <div class="col-lg-8 border border-dark rounded justify-content-center m-4 bg-white">
+        <form class="m-3" asp-action="Create" asp-action="Main" method="POST">
+            <div class="form-row">
+                <div class="col-lg-6 ml-5">
+                    <label asp-for="FirstName"><h5>First Name:</h5></label>
+                    <p><span asp-validation-for="FirstName" class="text-danger"></span></p>
+                </div>
+                <div class="col-4 justify-content-end">
+                    <input type="text" class="form-control" id="firstName" asp-for="FirstName">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6 ml-5">
+                    <label asp-for="LastName"><h5>Last Name:</h5></label>
+                    <p><span asp-validation-for="LastName" class="text-danger"></span></p>
+                </div>
+                <div class="col-4 justify-content-end">
+                    <input type="text" class="form-control" id="lastName" asp-for="LastName">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6 ml-5">
+                    <label asp-for="Age"><h5>Age:</h5></label>
+                    <p><span asp-validation-for="Age" class="text-danger"></span></p>
+                </div>
+                <div class="col-4 justify-content-end">
+                    <input type="text" class="form-control" id="age" asp-for="Age">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6 ml-5">
+                    <label asp-for="Email"><h5>Email:</h5></label>
+                    <p><span asp-validation-for="Email" class="text-danger"></span></p>
+                </div>
+                <div class="col-4 justify-content-end">
+                    <input type="text" class="form-control" id="email" asp-for="Email">
+                </div>
+            </div>
+            <div class="form-row mb-3">
+                <div class="col-lg-6 ml-5">
+                    <label asp-for="Password"><h5>Password:</h5></label>
+                    <p><span asp-validation-for="Password" class="text-danger"></span></p>
+                </div>
+                <div class="col-4 justify-content-end">
+                    <input type="password" class="form-control" id="password" asp-for="Password">
+                </div>
+            </div>
+            <div class="form-row justify-content-end">
+                <div class="col-lg-3">
+                    <button type="submit" class="btn btn-primary text-right pl-4 pr-4">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
